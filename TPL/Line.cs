@@ -13,35 +13,9 @@ namespace TPL
         public int Index;
         public int ArgumentCount;
 
-        public readonly LineRangeType RangeType;
-
-        public Line()
-        {
-            if (this is LineArgument)
-                RangeType = LineRangeType.Argument;
-            else if (this is LineGlobal)
-                RangeType = LineRangeType.Global;
-            else if (this is LineInstance)
-                RangeType = LineRangeType.Instance;            
-            else
-                RangeType = LineRangeType.None;
-        }
-    }
-
-    public class LineArgument : Line
-    {
-        
-    }
-
-    public class LineGlobal : Line
-    {
-
+        public readonly LineRangeType RangeType;        
     }
     
-    public class LineInstance : Line
-    {
-
-    }
 
     public enum LineRangeType
     {
